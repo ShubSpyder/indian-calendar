@@ -12,24 +12,8 @@ function App() {
   const handleDateChange = (date: any): void => {
     const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
 
-    let selectedData: string = "";
-    let selectedMonth: string = "";
-
-    if (date.getDate().toString().length === 1) {
-      selectedData = "0" + date.getDate().toString();
-    } else {
-      selectedData = date.getDate().toString();
-    }
-
-    if ((date.getMonth() + 1).toString().length === 1) {
-      selectedMonth = "0" + (date.getMonth() + 1).toString();
-    } else {
-      selectedMonth = (date.getMonth() + 1).toString();
-    }
-
-    console.info(date.getFullYear() + "-" + selectedMonth + "-" + selectedData);
-
-    const url = `${baseApiUrl}&year=${date.getFullYear()}&month=${selectedMonth}&day=${selectedData}`;
+    const url = `${baseApiUrl}&year=${date.getFullYear()}&month=
+    ${date.getMonth() + 1}&day=${date.getDate()}`;
 
     fetch(url)
       .then((response) => response.json())
