@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="container">
       <h2>Select the date to see the holiday</h2>
-      <Calendar onChange={handleDateChange} />
+      <Calendar onChange={handleDateChange} className="main-calendar"/>
 
       {!isLoading && (
         <div className="holiday-data">
