@@ -21,7 +21,7 @@ function App() {
       selectedData = date.getDate().toString();
     }
 
-    if (date.getMonth().toString().length === 1) {
+    if ((date.getMonth() + 1).toString().length === 1) {
       selectedMonth = "0" + (date.getMonth() + 1).toString();
     } else {
       selectedMonth = (date.getMonth() + 1).toString();
