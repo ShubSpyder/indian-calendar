@@ -37,7 +37,7 @@ function App() {
         <div className="holiday-data">
           {holidayData.length ? (
             holidayData.map((data: any, index: number) => (
-              <p className="holiday">
+              <p className="holiday" key={index}>
                 {index + 1}. {data.name}
               </p>
             ))
