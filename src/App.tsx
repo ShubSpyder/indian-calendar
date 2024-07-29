@@ -45,9 +45,13 @@ function App() {
 
       <div className="holiday-data">
         {holidayData.length ? (
-          holidayData.map((data: any) => <p>{data.name}</p>)
+          holidayData.map((data: any, index: number) => (
+            <p className="holiday">
+              {index + 1}. {data.name}
+            </p>
+          ))
         ) : (
-          <p>No holiday found</p>
+          <p className="no-holiday">No holiday found</p>
         )}
       </div>
     </div>

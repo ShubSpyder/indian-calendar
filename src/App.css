@@ -12,5 +12,13 @@
 
   .holiday-data {
     margin-top: 1.6rem;
+
+    .holiday {
+      color: #2e7d32;
+      margin-bottom: 0.6rem;
+    }
+    .no-holiday {
+      color: #c62828;
+    }
   }
 }
