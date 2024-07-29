@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Calendar from "react-calendar";
 
 function App() {
   const [holidayData, setHolidayData] = useState([]);
+
+  useEffect(() => {
+    handleDateChange(new Date());
+  }, []);
 
   const handleDateChange = (date: any): void => {
     const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
