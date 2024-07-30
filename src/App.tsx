@@ -25,6 +25,7 @@ function App() {
       })
       .catch(() => {
         setIsLoading(false);
+        setHolidayData([]);
       });
   };
 
